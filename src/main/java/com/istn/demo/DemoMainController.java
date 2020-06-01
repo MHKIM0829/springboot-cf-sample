@@ -1,6 +1,5 @@
 package com.istn.demo;
 
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,10 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class DemoMainController {
     
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String isRunning() {
-        return "Hello Springboot";
+        return String.format("{\"message\":\"Hello Springboot\"}");
     }
 
     @RequestMapping(value = "/{param1}/{param2}", method = RequestMethod.GET)

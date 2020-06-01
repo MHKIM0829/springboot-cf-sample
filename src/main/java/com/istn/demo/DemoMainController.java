@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 public class DemoMainController {
+    
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String isRunning() {
+        return "Hello Springboot";
+    }
 
     @RequestMapping(value = "/{param1}/{param2}", method = RequestMethod.GET)
     public String hello(@PathVariable("param1") String param1,
@@ -16,4 +22,5 @@ public class DemoMainController {
 
         return String.format("{\"message\":\"Hello %s %s\"}", param1, param2);
     }
+    
 }

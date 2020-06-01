@@ -1,0 +1,10 @@
+---
+applications:
+- name: springboot_demo
+  memory: 1024MB
+  instances: 1
+  path: target/demo-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_DEFAULT: cf
+  disk_quota: 256MB
+  random-route: true
